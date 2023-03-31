@@ -1,0 +1,37 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class Test<GenericType> {
+    // GenericType field (any value)
+    public GenericType  m;
+    
+    public Test(GenericType x)
+    {
+        m = x;
+    }
+    // returns genericType  value
+    public getSomeValue<GenericType>()
+    {
+        return m;
+    }
+    
+    
+
+}
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        // we must specify the type we want to pass to our constructor
+       Test instance = new Test<string>("dasdasd");
+       Console.WriteLine(instance.getSomeValue(3));
+       Console.ReadKey();
+    }
+   
+   
+    
+}
